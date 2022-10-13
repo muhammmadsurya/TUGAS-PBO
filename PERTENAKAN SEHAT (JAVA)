@@ -1,0 +1,67 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        int n;
+
+        Scanner input=new Scanner(System.in);
+
+
+        int k=0;
+        do {
+            System.out.print("=");
+            k++;
+        }
+        while(k<=42);
+        System.out.println("\n          PETERNAKAN SEHAT          ");
+        System.out.println("======================================");
+        System.out.print("Masukan banyak hewan : ");
+        n =input.nextInt();
+
+        String hewan[][]=new String[n][4];
+        System.out.println("Masukan data hewan :");
+        for (int i = 0; i< n; i++)
+        {
+            System.out.println("");
+            System.out.println("Hewan ke-"+(i+1));
+            for (int j=0;j<4;j++)
+            {
+                if (j==0)
+                {
+                    System.out.print("Jenis : ");
+                }
+                else if(j==1)
+                {
+                    System.out.print("Jumlah : ");
+                }
+                else if(j==2)
+                {
+                    System.out.print("Sakit : ");
+                }
+                else
+                {
+                    System.out.print("Kandang : ");
+                }
+                hewan[i][j]=input.next();
+            }
+        }
+
+        System.out.println("----------------------");
+        System.out.println("\ndata hewan peternakan ");
+        System.out.println("----------------------");
+        System.out.println("Jenis \tJumlah \tSakit \tKandang");
+        for(int i = 0; i< n; i++)
+        {
+            for (int j=0; j<4;j++)
+            {
+                System.out.print(hewan[i][j]+"\t");
+            }
+            System.out.println();
+        }
+
+    }
+}
