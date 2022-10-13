@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int n;
+	
+	int k=0;
+	do {
+            cout<<"=";
+            k++;
+        }
+        while(k<=40);
+    cout<<"\n           PETERNAKAN SEHAT        "<<endl;
+    cout<<"========================================="<<endl;
+    cout<<"Masukan banyak hewan : ";
+	cin>>n;
+	
+	string hewan[n][4];
+	
+	cout<<"Masukan data hewan ternak :"<<endl;
+	for (int i=0;i<n;i++)
+        {
+			cout<<""<<endl;
+            cout<<"Hewan ke-"<<i+1<<endl;
+            for (int j=0;j<4;j++)
+            {
+                if (j==0)
+                {
+                    cout<<"Jenis : ";
+                }
+                else if(j==1)
+                {
+                    cout<<"Jumlah : ";
+                }
+                else if(j==2)
+                {
+                    cout<<"Sakit : ";
+                }
+                else
+                {
+                    cout<<"Kandang : ";
+                }
+                cin>>hewan[i][j];
+            }
+        }
+	cout<<"----------------------------------------"<<endl;
+    cout<<"\ndata hewan ternak "<<endl;
+    cout<<"----------------------------------------"<<endl;
+    cout<<"JENIS \tJUMLAH \tSAKIT \tKANDANG"<<endl;
+    for(int i=0;i<n;i++)
+    {
+        for (int j=0; j<4;j++)
+        {
+            cout<<hewan[i][j]<<"\t\t";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
